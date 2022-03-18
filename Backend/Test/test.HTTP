@@ -1,0 +1,50 @@
+GET http://localhost:4000/wilders HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:4000/wilders HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Nono",
+    "city": "somewhere",
+    "skills":[
+        {"title":"Numpy", "votes":9},
+        {"title":"Pandas", "votes":6},
+        {"title":"Tensor-Flow", "votes":28},
+        {"title":"Pandas", "votes":6},
+        {"title":"Pandas", "votes":6}
+    ]
+}
+
+###
+GET http://localhost:4000/wilders/6228e135c00db4dcab42d0a9 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://localhost:4000/wilders/622a4d133aa38de8406ef68a HTTP/1.1
+Content-Type: application/json
+
+{
+    "city":"somewhere"
+}
+
+###
+GET http://localhost:4000/wilders HTTP/1.1
+content-type: application/json
+
+###
+DELETE http://localhost:4000/wilders/6228e135c00db4dcab42d0a9 HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:4000/wilders HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:4000/project HTTP/1.1
+Content-Type: application/json
+
+###
+DELETE http://localhost:4000/wilders
+Content-Type: application/json
